@@ -12,4 +12,8 @@ module.exports = app => {
   router.get('/users/:id',controller.home.editUserInfo);
   router.post('/editusers',controller.home.editUser);
   router.delete('/users/:id',controller.home.deleteUserInfo);
+  router.get('/auths/list',controller.home.authInfo);
+  router.get('/auths',controller.home.rolesInfo);
+
+  
 };

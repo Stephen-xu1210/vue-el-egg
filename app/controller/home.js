@@ -77,6 +77,21 @@ class HomeController extends Controller {
     }
     
   }
+
+  // 权限列表数据
+  async authInfo(){
+    const { ctx } = this;
+    const res = await this.service.auth.index();
+    console.log('res',res);
+    ctx.body = res;
+  }
+  // 角色列表数据
+  async rolesInfo(){
+    const { ctx } = this;
+    const res = await this.service.auth.rolesInfo();
+    console.log('res',res);
+    ctx.body = res;
+  }
   // 登录验证
   async loginCheck(){
     const { ctx } = this;
